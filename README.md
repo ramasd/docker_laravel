@@ -1,38 +1,52 @@
 # :rainbow: docker_laravel :cloud_with_lightning_and_rain:
-Fresh laravel project in docker.
+Fresh *laravel* project in *docker*.
 
 ---
 
-## Settings
+## How to start
 
-Set your mysql database credentials in the **/env/mysql.env** and **/env/phpmyadmin.env** files.
+- Set the wanted mysql database credentials in the **/env/mysql.env** and **/env/phpmyadmin.env**.
 
+- Go to project directory
+>`cd path_to_docker_laravel_project`
+
+- Create new *src* directory
+>`mkdir src`
+
+- Create new *laravel* project
+>`docker-compose run --rm composer create-project --prefer-dist laravel/laravel .`
+
+- Set values in .env file
+```
+DB_CONNECTION=mysql
+DB_HOST=db              #[database service name from docker-compose.yaml file]
+DB_PORT=3306
+DB_DATABASE=homestead   #[mysql.env MYSQL_DATABASE value]
+DB_USERNAME=homestead   #[mysql.env MYSQL_USER value]
+DB_PASSWORD=secret      #[mysql.env MYSQL_PASSWORD value]
+```
+
+- Start *laravel* application and *phpmyadmin* containers
+>`docker-compose up -d --build server phpmyadmin`
+
+`localhost:8000` - *laravel* app <br />
+`localhost:8080` - *phpmyadmin*
+
+- Stop running containers
+>`docker-compose down`
+
+---
 
 ## Commands
 
->`cd docker_laravel` *go to project directory.*
-
->`mkdir src` *create new 'src' directory*
-
-Composer:<br />
+**composer**:<br />
 `docker-compose run --rm composer [...]`
->`docker-compose run --rm composer create-project --prefer-dist laravel/laravel .` *create new laravel project.*
+>**_E.g._** `docker-compose run --rm composer update` *updates all outdated commands.*
 
-Artisan:<br />
+**artisan**:<br />
 `docker-compose run --rm artisan [...]`
->`docker-compose run --rm artisan migrate` *run migrations.*
+>**_E.g._** `docker-compose run --rm artisan migrate` *runs migrations.*
 
-Start laravel application:<br />
-`docker-compose up -d --build server`
-
-Start laravel application and phpmyadmin:<br />
-`docker-compose up -d --build server phpmyadmin`
-
-Stop laravel application:<br />
-`docker-compose down`
-
-
-
-npm:<br />
+**npm**:<br />
 `docker-compose run --rm npm [...]`
->**_E.g._** `docker-compose run --rm npm ls` *list installed modules.*
+>**_E.g._** `docker-compose run --rm npm ls` *lists installed modules.*
