@@ -7,16 +7,16 @@ Fresh *laravel* project in *docker*.
 
 - Set the wanted mysql database credentials in the **/env/mysql.env** and **/env/phpmyadmin.env**.
 
-- Go to project directory
+- Go to project directory:
 >`cd path_to_docker_laravel_project`
 
-- Create new *src* directory
+- Create new *src* directory:
 >`mkdir src`
 
-- Create new *laravel* project
+- Create new *laravel* project:
 >`docker-compose run --rm composer create-project --prefer-dist laravel/laravel .`
 
-- Set values in .env file
+- Set values in the **/src/.env** file:
 ```
 DB_CONNECTION=mysql
 DB_HOST=db              #[database service name from docker-compose.yaml file]
@@ -26,7 +26,7 @@ DB_USERNAME=homestead   #[mysql.env MYSQL_USER value]
 DB_PASSWORD=secret      #[mysql.env MYSQL_PASSWORD value]
 ```
 
-- Start *laravel* application and *phpmyadmin* containers
+- Start *laravel* application and *phpmyadmin* containers:
 >`docker-compose up -d --build server phpmyadmin`
 
 `localhost:8000` - *laravel* app <br />
