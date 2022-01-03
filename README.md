@@ -29,8 +29,8 @@ DB_PASSWORD=secret      #[mysql.env MYSQL_PASSWORD value]
 - Start *laravel* application and *phpmyadmin* containers:
 >`docker-compose up -d --build server phpmyadmin`
 
-`localhost:8000` - *laravel* app <br />
-`localhost:8080` - *phpmyadmin*
+`http://localhost:8000` - *laravel* app <br />
+`http://localhost:8080` - *phpmyadmin*
 
 - Stop running containers
 >`docker-compose down`
