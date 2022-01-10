@@ -11,14 +11,14 @@ Clone the project to a local machine:
 - Go to project directory:
 >`cd docker_laravel`
 
-- Set the wanted mysql database credentials in the **/env/mysql.env**. I.e.,
+- Set the wanted *mysql* database credentials in the **/env/mysql.env**. I.e.,
 ```
 MYSQL_DATABASE=homestead
 MYSQL_USER=homestead
 MYSQL_PASSWORD=secret
 MYSQL_ROOT_PASSWORD=secret
 ```
-- Set the phpmyadmin credentials in the **/env/phpmyadmin.env**. I.e.,
+- Set the *phpmyadmin* credentials in the **/env/phpmyadmin.env**. I.e.,
 ```
 PMA_HOST=db           #[database service name from docker-compose.yaml file]
 PMA_USER=homestead    #[mysql.env MYSQL_USER value]
@@ -32,7 +32,7 @@ PMA_PASSWORD=secret   #[mysql.env MYSQL_PASSWORD value]
 - Create new *laravel* project:
 >`docker-compose run --rm composer create-project --prefer-dist laravel/laravel .`
 
-- Set values in the **/src/.env** file:
+- Set database environment values in the **/src/.env** file:
 ```
 DB_CONNECTION=mysql
 DB_HOST=db              #[database service name from docker-compose.yaml file]
