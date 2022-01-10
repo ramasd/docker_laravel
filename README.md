@@ -9,7 +9,7 @@ Clone the project to a local machine:
 >`git clone https://github.com/ramasd/docker_laravel.git`
 
 - Go to project directory:
->`cd path_to_docker_laravel_project`
+>`cd docker_laravel`
 
 - Set the wanted mysql database credentials in the **/env/mysql.env**. I.e.,
 ```
