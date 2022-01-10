@@ -5,10 +5,26 @@ Fresh *laravel* project in *docker*.
 
 ## How to start
 
-- Set the wanted mysql database credentials in the **/env/mysql.env** and **/env/phpmyadmin.env**.
+Clone the project to a local machine:
+>`git clone https://github.com/ramasd/docker_laravel.git`
 
 - Go to project directory:
 >`cd path_to_docker_laravel_project`
+
+- Set the wanted mysql database credentials in the **/env/mysql.env**. I.e.,
+```
+MYSQL_DATABASE=homestead
+MYSQL_USER=homestead
+MYSQL_PASSWORD=secret
+MYSQL_ROOT_PASSWORD=secret
+```
+- Set the phpmyadmin credentials in the **/env/phpmyadmin.env**. I.e.,
+```
+PMA_HOST=db           #[database service name from docker-compose.yaml file]
+PMA_USER=homestead    #[mysql.env MYSQL_USER value]
+PMA_PASSWORD=secret   #[mysql.env MYSQL_PASSWORD value]
+```
+
 
 - Create new *src* directory:
 >`mkdir src`
