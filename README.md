@@ -57,12 +57,12 @@ DB_PASSWORD=secret      #[mysql.env MYSQL_PASSWORD value]
 
 **composer**:<br />
 `docker-compose run --rm composer [...]`
->**_E.g._** `docker-compose run --rm composer update` *updates all outdated commands.*
+>**_I.e._,** `docker-compose run --rm composer update` *updates all outdated commands.*
 
 **artisan**:<br />
 `docker-compose run --rm artisan [...]`
->**_E.g._** `docker-compose run --rm artisan migrate` *runs migrations.*
+>**_I.e._,** `docker-compose run --rm artisan migrate` *runs migrations.*
 
 **npm**:<br />
 `docker-compose run --rm npm [...]`
->**_E.g._** `docker-compose run --rm npm ls` *lists installed modules.*
+>**_I.e._,** `docker-compose run --rm npm ls` *lists installed modules.*
